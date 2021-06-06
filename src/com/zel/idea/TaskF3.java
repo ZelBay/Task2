@@ -11,6 +11,7 @@ public class TaskF3 {
         System.out.println("Введите строки: ");
         String[] str = new String[rowsNumber];
         ArrayList<Integer> arrayList = new ArrayList<>();
+        ArrayList<String> arrayList1 = new ArrayList<>();
         for (int i = 0; i < str.length; i++) {                 //вводим строки с клавиатуры
             str[i] = scanner.next();
         }
@@ -26,14 +27,14 @@ public class TaskF3 {
             arrayList.add(k);
             k = 0;
         }
-        int max = arrayList.get(0);                            //вычисляем максимальный элемент динамического массива
-        int indexOfMax = 0;                                    //и по индексу макс. элемента выводим слово из массива строк
-        for (int i = 1; i < arrayList.size(); i++) {           //с таким же индексом
-            if (arrayList.get(i) > max) {
+        int max = arrayList.get(0);
+        for (int i = 1; i < arrayList.size(); i++) {
+            if (arrayList.get(i) >= max) {
+                arrayList1.add(str[i]);
                 max = arrayList.get(i);
+            } else {
+                arrayList1.add(str[0]);
             }
-        }
-        indexOfMax = arrayList.indexOf(max);
-        System.out.println(str[indexOfMax]);
+        } System.out.println(arrayList1.get(0));
     }
 }
