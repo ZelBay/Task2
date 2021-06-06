@@ -12,12 +12,12 @@ public class TaskF3 {
         String[] str = new String[rowsNumber];
         ArrayList<Integer> arrayList = new ArrayList<>();
         ArrayList<String> arrayList1 = new ArrayList<>();
-        for (int i = 0; i < str.length; i++) {                 //вводим строки с клавиатуры
+        for (int i = 0; i < str.length; i++) {
             str[i] = scanner.next();
         }
         int k = 0;
-        for (int i = 0; i < str.length; i++) {                 //пробегаемся по словам в массиве строк, вычисляем количество различных символов
-            String[] word = new String[str[i].length()];       //и добавялем их в динамический массив
+        for (int i = 0; i < str.length; i++) {
+            String[] word = new String[str[i].length()];
             word = str[i].split("");
             for (int j = 0; j < word.length; j++) {
                 if (str[i].indexOf(word[j]) == str[i].lastIndexOf(word[j])) {
